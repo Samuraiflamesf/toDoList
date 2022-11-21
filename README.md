@@ -23,8 +23,11 @@
 
 ## 🎯 Implementações/Features
 
-- [ ] Começando estilização 
-- [ ] Resolvendo Bugs
+- [x] Começando estilização 
+- [x] Resolvendo Bugs
+- [x] Criada conexão com Banco de Dados
+- [x] Query de dados com PDO
+- [x] Adicionando Ajax
 - [ ] Projeto Finalizado
 
 ## 🤝 Colaboradores

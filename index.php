@@ -1,5 +1,5 @@
 <?php
 // index.php
-header("Location: http://localhost/to_do_list/public/index.php");
+header("Location: public/index.php");
 exit();
 ?>
