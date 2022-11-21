@@ -20,8 +20,13 @@ $nome_tipo = $result[0]['Nome'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+    <script type="text/javascript" src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../assets/vendor/bootstrap/jquery-3.6.0.min.js"></script>
     <!-- Styles Custom -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- DataTable -->
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/DataTables/datatables.css" />
+    <script type="text/javascript" src=".../assets/vendor/DataTables/datatables.min.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b04ef94895.js" crossorigin="anonymous"></script>
     <!-- Ícone e Nome do site -->
@@ -110,9 +115,20 @@ $nome_tipo = $result[0]['Nome'];
     </div>
 
     <!-- Corpo de tarefaras  -->
-    <div class="card">
+    <div class="card container" id="cardData">
         <div class="card-body">
-            
+            <table id="tabela" class="table table-hover my-4">
+                <thead>
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Status</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -159,10 +175,21 @@ $nome_tipo = $result[0]['Nome'];
     </div>
 
     <!-- Javascript Custom -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/script.js"></script>
-    <!-- Bootstrap -->
-    <script type="text/javascript" src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="../assets/vendor/bootstrap/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#tabela').DataTable({
+                "ordering": false,
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.13.1/i18n/pt-BR.json",
+                },
+            });
+
+        });
+    </script>
+   
 </body>
 
 </html>

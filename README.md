@@ -27,7 +27,8 @@
 - [x] Resolvendo Bugs
 - [x] Criada conexão com Banco de Dados
 - [x] Query de dados com PDO
-- [x] Adicionando Ajax
+- [ ] Adicionando Data table com Banco de dados
+- [ ] Adicionando Ajax
 - [ ] Projeto Finalizado
 
 ## 🤝 Colaboradores
