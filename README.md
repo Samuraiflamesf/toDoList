@@ -10,15 +10,14 @@
 
 <div align="center">
   
-[![Tech](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
+[![Tech](https://skillicons.dev/icons?i=html,css,js,bootstrap,php,mysql)](https://skillicons.dev)
 
 </div>
 
 # 📄 Tipo do Projeto/Nome do Projeto
 
-![status-finalizado](https://user-images.githubusercontent.com/62897976/185768561-589083e1-f18f-480b-9709-0ca24acf9c6d.svg)
+<!-- ![status-finalizado](https://user-images.githubusercontent.com/62897976/185768561-589083e1-f18f-480b-9709-0ca24acf9c6d.svg) -->
 ![status-em-andamento](https://user-images.githubusercontent.com/62897976/185768581-1d051a52-2e60-4378-b31d-39028cbfb5c8.svg)
-![status-descontinuado](https://user-images.githubusercontent.com/62897976/185768580-1dcbe992-a35c-4f36-8b2b-14d469203d02.svg)
 
 > Resumo do Projeto: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
 
