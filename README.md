@@ -1,6 +1,6 @@
 <div align="center">
   
-# Nome do Projeto 📁 <a href="#">Link da Aplicação</a>
+# ToDo List 📁 <a href="#">Link da Aplicação</a>
 
 </div>
 
@@ -14,7 +14,7 @@
 
 </div>
 
-# 📄 Tipo do Projeto/Nome do Projeto
+# 📄 WEB/To Do List
 
 <!-- ![status-finalizado](https://user-images.githubusercontent.com/62897976/185768561-589083e1-f18f-480b-9709-0ca24acf9c6d.svg) -->
 ![status-em-andamento](https://user-images.githubusercontent.com/62897976/185768581-1d051a52-2e60-4378-b31d-39028cbfb5c8.svg)
