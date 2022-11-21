@@ -9,12 +9,12 @@
 <img src="./src/Assets/gif.gif" alt="Descrição da imagem">
 
 <div align="center">
-  
+
 [![Tech](https://skillicons.dev/icons?i=html,css,js,bootstrap,php,mysql)](https://skillicons.dev)
 
 </div>
 
-# 📄 WEB/To Do List
+# 📄 To Do List
 
 <!-- ![status-finalizado](https://user-images.githubusercontent.com/62897976/185768561-589083e1-f18f-480b-9709-0ca24acf9c6d.svg) -->
 ![status-em-andamento](https://user-images.githubusercontent.com/62897976/185768581-1d051a52-2e60-4378-b31d-39028cbfb5c8.svg)
