@@ -29,3 +29,7 @@ body{
   color: var(--white);
 
 }
+td{
+  color: var(--white);
+  font-weight: 500;
+}

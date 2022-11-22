@@ -1,12 +1,6 @@
 <?php
 require_once('../int/conexao.php');
 
-//Recuperar dados 
-$query = $pdo->query("SELECT * FROM tipo ");
-$result = $query->fetchAll(PDO::FETCH_ASSOC);
-$id_tipo = $result[0]['id'];
-$nome_tipo = $result[0]['Nome'];
-
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -18,15 +12,14 @@ $nome_tipo = $result[0]['Nome'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DataTable -->
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/DataTables/datatables.min.css" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../assets/vendor/bootstrap/jquery-3.6.0.min.js"></script>
     <!-- Styles Custom -->
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <!-- DataTable -->
-    <link rel="stylesheet" type="text/css" href="../assets/vendor/DataTables/datatables.css" />
-    <script type="text/javascript" src=".../assets/vendor/DataTables/datatables.min.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b04ef94895.js" crossorigin="anonymous"></script>
     <!-- Ícone e Nome do site -->
@@ -50,7 +43,8 @@ $nome_tipo = $result[0]['Nome'];
         <div class="row w-100">
             <div class="card col-md-6 m-auto p-1">
                 <div class="card-body">
-                    <form action="" class="100-w" id="form-task">
+                    <!-- Formulário para criar novas task  -->
+                    <form class="100-w" id="form-task">
                         <div class="form-floating mb-3 w-100">
                             <input type="text" class="form-control" id="floatingTask" placeholder="Task" required>
                             <label for="floatingTask">Adicionar Tarefa</label>
@@ -67,31 +61,32 @@ $nome_tipo = $result[0]['Nome'];
                                     foreach ($result[$i] as $key => $value) {
                                     };
                                     echo <<<HTML
-                                    <option value="{$result[$i]['id']}">{$result[$i]['Nome']}</option>
+                                    <option value="{$result[$i]['id_tipo']}">{$result[$i]['nome']}</option>
                                     
                                     HTML;
                                 }
-
                                 ?>
+
                             </select>
+
                         </div>
-                        <!-- Nível da Tarefa -->
+                        <!-- Status da Tarefa -->
                         <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupSelect01">Nível</label>
+                            <label class="input-group-text" for="inputGroupSelect01">Status</label>
 
                             <select class="form-select" id="inputGroupSelect01">
                                 <?php
                                 //Pegar dados Tipo 
-                                $query = $pdo->query("SELECT * FROM nivel ");
+                                $query = $pdo->query("SELECT * FROM status ");
                                 $result = $query->fetchAll(PDO::FETCH_ASSOC);
-                                $id_nivel = $result[0]['id'];
-                                $nome_nivel = $result[0]['Nome'];
+                                $id_status = $result[0]['id_status'];
+                                $nome_status = $result[0]['nome'];
 
                                 for ($i = 0; $i < @count($result); $i++) {
                                     foreach ($result[$i] as $key => $value) {
                                     };
                                     echo <<<HTML
-                                    <option value="{$result[$i]['id']}">{$result[$i]['Nome']}</option>
+                                    <option value="{$result[$i]['id_status']}">{$result[$i]['nome']}</option>
                                     
                                     HTML;
                                 }
@@ -101,34 +96,20 @@ $nome_tipo = $result[0]['Nome'];
                         </div>
                         <input type="submit" value="Criar" id="submitCreate" class="btn btn-danger text-center w-100">
                     </form>
+                    <div class="mt-3" id="mensagem-task">
+
+                    </div>
                 </div>
             </div>
-
         </div>
-
-        <div class="row w-100 mt-3 d-flex align-content-around flex-wrap">
-
-
-        </div>
-
-
     </div>
 
-    <!-- Corpo de tarefaras  -->
-    <div class="card container" id="cardData">
+    <!-- Corpo/ as tarefas  em outro PhP-->
+    <div class="card container mt-3" id="cardData">
         <div class="card-body">
-            <table id="tabela" class="table table-hover my-4">
-                <thead>
-                    <tr>
-                        <th>Tarefa</th>
-                        <th>Status</th>
-                        <th>Tipo</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <?php
+            require_once('task.php');
+            ?>
         </div>
     </div>
 
@@ -152,7 +133,7 @@ $nome_tipo = $result[0]['Nome'];
                         foreach ($result[$i] as $key => $value) {
                         };
                         echo <<<HTML
-                                    <input type="text" class="form-control mb-2" value="{$result[$i]['Nome']}">                                    
+                                    <input type="text" class="form-control mb-2" value="{$result[$i]['nome']}">                                    
                                     HTML;
                     }
 
@@ -176,20 +157,8 @@ $nome_tipo = $result[0]['Nome'];
 
     <!-- Javascript Custom -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/js/script.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#tabela').DataTable({
-                "ordering": false,
-                language: {
-                    url: "//cdn.datatables.net/plug-ins/1.13.1/i18n/pt-BR.json",
-                },
-            });
-
-        });
-    </script>
-   
+    <script type="text/javascript" src="../assets/js/ajax.js"></script>
+    <script type="text/javascript" src="../assets/vendor/DataTables/datatables.min.js"></script>
 </body>
 
 </html>

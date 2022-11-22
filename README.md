@@ -27,7 +27,9 @@
 - [x] Resolvendo Bugs
 - [x] Criada conexão com Banco de Dados
 - [x] Query de dados com PDO
-- [ ] Adicionando Data table com Banco de dados
+- [x] Criando chaves estrangeiras/ relacionamento de dados
+- [x] Adicionando Data table com Banco de dados
+- [ ] Fazer script para mudar a cor do badge
 - [ ] Adicionando Ajax
 - [ ] Projeto Finalizado
 
