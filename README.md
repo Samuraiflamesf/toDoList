@@ -19,7 +19,7 @@
 <!-- ![status-finalizado](https://user-images.githubusercontent.com/62897976/185768561-589083e1-f18f-480b-9709-0ca24acf9c6d.svg) -->
 ![status-em-andamento](https://user-images.githubusercontent.com/62897976/185768581-1d051a52-2e60-4378-b31d-39028cbfb5c8.svg)
 
-> Resumo do Projeto: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+> Resumo do Projeto: toDoList é um gerenciador de tarefas que ajuda a enfrentar aquela sensação de estar perdido no meio de tanta coisa pra fazer que todo mundo conhece.
 
 ## 🎯 Implementações/Features
 
