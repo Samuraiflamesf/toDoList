@@ -32,6 +32,7 @@
 - [x] Fazer script para mudar a cor do badge
 - [x] Fazendo CRUD 
 - [x] Adicionando Ajax 
+- [ ] Adicionando Subtasks
 - [ ] Projeto Finalizado
 
 ## 🤝 Colaboradores
