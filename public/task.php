@@ -2,7 +2,7 @@
 require_once('../int/conexao.php');
 
 echo <<<HTML
-<table class="table my-4" id="tabela" id='listar'>
+<table class="table table-hover my-4 display" id="tabela" id='listar'>
 <thead>
 <tr>
 <th class='col-8'>Tarefa</th>
@@ -26,9 +26,9 @@ for ($i = 0; $i < @count($result); $i++) {
     <tr>
     <td>{$result[$i]['task']}
         <span class="mx-1 badge " id='checkColor'>
-        {$result2[$result[$i]['fk_status']-1]['nome']}
+        {$result2[$result[$i]['fk_status'] - 1]['nome']}
     </span></td>
-    <td>{$result3[$result[$i]['fk_tipo']-1]['nome']}</td>
+    <td>{$result3[$result[$i]['fk_tipo'] - 1]['nome']}</td>
     <td></td>
     </tr>
     HTML;
@@ -67,11 +67,11 @@ for ($i = 0; $i < @count($result); $i++) {
 <script type="text/javascript">
     $(document).ready(function() {
         $('#tabela').DataTable({
-            "ordering": false,
             language: {
                 url: "//cdn.datatables.net/plug-ins/1.13.1/i18n/pt-BR.json",
-            },
+            }
         });
+
 
     });
 </script>

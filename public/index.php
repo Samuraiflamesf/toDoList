@@ -117,8 +117,10 @@ require_once('../int/conexao.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/ajax.js"></script>
     <script type="text/javascript" src="../assets/vendor/DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="../assets/vendor/DataTables/dataTables.fixedHeader.min.js"></script>
     <script src="../assets/js/ajax.js"></script>
     <script src="../assets/js/ajax2.js"></script>
+    
 </body>
 
 </html>
