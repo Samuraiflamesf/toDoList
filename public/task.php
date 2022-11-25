@@ -2,12 +2,12 @@
 require_once('../int/conexao.php');
 
 echo <<<HTML
-<table class="table my-4" id="tabela" >
+<table class="table my-4" id="tabela" id='listar'>
 <thead>
 <tr>
-<th>Tarefa</th>
-<th>Tipo</th>
-<th>Ações</th>
+<th class='col-8'>Tarefa</th>
+<th class='col'>Tipo</th>
+<th class='col'>Ações</th>
 </tr>
 </thead>
 <tbody>
@@ -43,21 +43,21 @@ for ($i = 0; $i < @count($result); $i++) {
         let badge = document.querySelectorAll('#checkColor');
 
         for (let i = 0; i < badge.length; i++) {
-            if (badge[i].innerHTML == 'Normal') {
+            if (badge[i].innerText == 'Normal') {
                 badge[i].classList.remove('bg-secondary');
-                badge[i].classList.add('bg-danger');
+                badge[i].classList.add('bg1');
             }
-            if (badge[i].innerHTML == 'Moderado') {
+            if (badge[i].innerText == 'Moderado') {
                 badge[i].classList.remove('bg-secondary');
-                badge[i].classList.add('bg-danger');
+                badge[i].classList.add('bg2');
             }
-            if (badge[i].innerHTML == 'Alto') {
+            if (badge[i].innerText == 'Alto') {
                 badge[i].classList.remove('bg-secondary');
-                badge[i].classList.add('bg-danger');
+                badge[i].classList.add('bg3');
             }
-            if (badge[i].innerHTML == 'Altissimo') {
+            if (badge[i].innerText == 'Altissimo') {
                 badge[i].classList.remove('bg-secondary');
-                badge[i].classList.add('bg-danger');
+                badge[i].classList.add('bg4');
             }
 
         }

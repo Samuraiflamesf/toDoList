@@ -29,8 +29,9 @@
 - [x] Query de dados com PDO
 - [x] Criando chaves estrangeiras/ relacionamento de dados
 - [x] Adicionando Data table com Banco de dados
-- [ ] Fazer script para mudar a cor do badge
-- [ ] Adicionando Ajax
+- [x] Fazer script para mudar a cor do badge
+- [x] Fazendo CRUD 
+- [x] Adicionando Ajax 
 - [ ] Projeto Finalizado
 
 ## 🤝 Colaboradores

@@ -44,61 +44,8 @@ require_once('../int/conexao.php');
             <div class="card col-md-6 m-auto p-1">
                 <div class="card-body">
                     <!-- Formulário para criar novas task  -->
-                    <form class="100-w" id="form-task">
-                        <div class="form-floating mb-3 w-100">
-                            <input type="text" class="form-control" id="floatingTask" placeholder="Task" required>
-                            <label for="floatingTask">Adicionar Tarefa</label>
-                        </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
-                            <!-- Criar Ajax para editar isso -->
-                            <select class="form-select" id="inputGroupSelect01">
-                                <?php
-                                //Pegar dados Tipo 
-                                $query = $pdo->query("SELECT * FROM tipo ");
-                                $result = $query->fetchAll(PDO::FETCH_ASSOC);
-                                for ($i = 0; $i < @count($result); $i++) {
-                                    foreach ($result[$i] as $key => $value) {
-                                    };
-                                    echo <<<HTML
-                                    <option value="{$result[$i]['id_tipo']}">{$result[$i]['nome']}</option>
-                                    
-                                    HTML;
-                                }
-                                ?>
-
-                            </select>
-
-                        </div>
-                        <!-- Status da Tarefa -->
-                        <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupSelect01">Status</label>
-
-                            <select class="form-select" id="inputGroupSelect01">
-                                <?php
-                                //Pegar dados Tipo 
-                                $query = $pdo->query("SELECT * FROM status ");
-                                $result = $query->fetchAll(PDO::FETCH_ASSOC);
-                                $id_status = $result[0]['id_status'];
-                                $nome_status = $result[0]['nome'];
-
-                                for ($i = 0; $i < @count($result); $i++) {
-                                    foreach ($result[$i] as $key => $value) {
-                                    };
-                                    echo <<<HTML
-                                    <option value="{$result[$i]['id_status']}">{$result[$i]['nome']}</option>
-                                    
-                                    HTML;
-                                }
-
-                                ?>
-                            </select>
-                        </div>
-                        <input type="submit" value="Criar" id="submitCreate" class="btn btn-danger text-center w-100">
-                    </form>
-                    <div class="mt-3" id="mensagem-task">
-
-                    </div>
+                    <?php
+                    require_once('formTask.php') ?>
                 </div>
             </div>
         </div>
@@ -118,38 +65,49 @@ require_once('../int/conexao.php');
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Configuração</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Configuração
+                    </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    Lista de Tipo:
-                    <!-- Formulário para config de tipos -->
-                    <form action="" id="formListTipo"></form>
-                    <?php
-                    //Pegar dados Tipo 
-                    $query = $pdo->query("SELECT * FROM tipo ");
-                    $result = $query->fetchAll(PDO::FETCH_ASSOC);
-                    for ($i = 0; $i < @count($result); $i++) {
-                        foreach ($result[$i] as $key => $value) {
-                        };
-                        echo <<<HTML
-                                    <input type="text" class="form-control mb-2" value="{$result[$i]['nome']}">                                    
-                                    HTML;
-                    }
 
-                    ?>
-                    <button class="btn btn-dark mb-2 mt-2 w-100">Alterar</button>
+                <div class="modal-body h6">
+                    Lista de Tipo:
+                    <div id="mensagem-task">
+
+                    </div>
+
+                    <!-- Formulário para config de tipos -->
+                    <form id="formListTipo" method="POST" class="mt-2">
+                        <select name="opTipos" class="form-select mb-2">
+
+
+                            <?php
+                            $query = $pdo->query("SELECT * FROM tipo ");
+                            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+                            foreach ($result as $option) {
+                            ?>
+                                <option value="<?php echo $option['id_tipo'] ?>"><?php echo $option['nome'] ?></option>
+                            <?php
+                            };
+                            ?>
+                        </select>
+                        <input type="text" name="tipo" class="form-control mb-2" value="">
+                        <button class="btn btn-dark mb-2 mt-2 w-100" type="submit">Alterar</button>
+                    </form>
                     <!-- Formulário para adicionar um tipo  -->
-                    <form action="" id="formNewTipo">
+                    <form method="POST" id="formNewTipo">
                         <div class="form-floating mb-3 w-100">
-                            <input type="text" class="form-control" id="floatingTask" placeholder="Task" required>
+                            <input type="text" class="form-control" id="floatingTask" placeholder="Tipo" name="tipoNew" required>
                             <label for="floatingTask">Novo Tipo</label>
                         </div>
                         <input type="submit" value="Criar" id="submitTipo" class="btn btn-danger text-center w-100">
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
                 </div>
             </div>
         </div>
@@ -159,6 +117,8 @@ require_once('../int/conexao.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/ajax.js"></script>
     <script type="text/javascript" src="../assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="../assets/js/ajax.js"></script>
+    <script src="../assets/js/ajax2.js"></script>
 </body>
 
 </html>

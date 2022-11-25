@@ -1,12 +1,11 @@
-$("#formListTipo").submit(function () {
+$("#formNewTipo").submit(function () {
   event.preventDefault();
   var formData = new FormData(this);
 
   $.ajax({
-    url: "../int/editarTipo.php",
+    url: "../int/criarTipo.php",
     type: "POST",
     data: formData,
-
     success: function (mensagem) {
       if (mensagem.trim() == "Salvo com Sucesso!") {
         window.location = "index.php";

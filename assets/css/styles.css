@@ -4,32 +4,48 @@
   --eggplant: #212b35ff;
   --imperial-red: #ef4241ff;
   --white: #fafcfeff;
+  --blue-munsell: #0091a9ff;
+  --selective-yellow: #f7b600ff;
+  --heat-wave: #f77900ff;
 }
-body{
-    background-color: var(--rich-black);
+body {
+  background-color: var(--rich-black);
 }
-.card{
-    background-color: var(--gunmetal);
-    color: var(--white);
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-  }
-.form-floating label{
-    color: var(--rich-black);
-    font-weight: 500;
-}
-#submitCreate{
-    font-weight: 400;
-}
-.btn{
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-#cardData th{
+.card {
+  background-color: var(--gunmetal);
   color: var(--white);
-
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-td{
+.form-floating label {
+  color: var(--rich-black);
+  font-weight: 500;
+}
+#submitCreate {
+  font-weight: 400;
+}
+.btn {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#cardData th {
+  color: var(--white);
+}
+td {
   color: var(--white);
   font-weight: 500;
+}
+.bg1 {
+  background-color: #0091a9ff;
+}
+.bg2 {
+  background-color: #f7b600ff;
+}
+.bg3 {
+  background-color: #f77900ff;
+}
+.bg4 {
+  background-color: var(--imperial-red) ;
 }
